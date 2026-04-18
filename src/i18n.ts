@@ -4,7 +4,7 @@ export const translations = {
   en: {
     title: "Staff-Level Engineer / Function Lead",
     summary:
-      "I design and scale complex platforms across enterprise, startup, and cross-organizational environments. My work spans distributed systems, privacy-first architecture, experimentation platforms, QA automation, and large-scale technical leadership.",
+      "I lead the design and transformation of large-scale platform systems across 10+ teams and 40+ engineers, driving architecture evolution from fragmented microservices into unified, data- and event-driven platforms.",
     tags: [
       "L6 Staff Engineer",
       "Architecture × Leadership × Platform",
@@ -42,12 +42,12 @@ export const translations = {
     experience: "Experience",
     careerTimeline: "Career timeline",
     highlights: [
-      { label: "40+", value: "Engineers in org scope" },
-      { label: "10+", value: "Cross-functional teams aligned" },
-      { label: "7+", value: "Systems unified into one platform" },
-      { label: "60k+", value: "Business customers, Performance-critical system" },
-      { label: "440k", value: "Users on auth platform" },
-      { label: "80+", value: "E2E Test in REST APIs/GraphQL/gRPC + automated in CI" },
+      { label: "40+", value: "Engineers (Technical decision ownership)" },
+      { label: "10+", value: "Teams (Cross-functional alignment)" },
+      { label: "7+", value: "Products (Integrated into unified platform)" },
+      { label: "60k+", value: "Business Customers (Performance-critical Systems)" },
+      { label: "440k", value: "Users (Global auth platform)" },
+      { label: "80+", value: "APIs (APIs/GraphQL/gRPC + QA Automation in CI)" },
     ],
     companies: [
       {
