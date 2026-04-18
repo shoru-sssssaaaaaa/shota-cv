@@ -90,7 +90,7 @@ export default function ShotaCvProfilePage() {
 
         <section className="overflow-hidden rounded-[2rem] border border-indigo-400/20 bg-gradient-to-br from-slate-800/80 via-indigo-900/40 to-slate-800/80 shadow-2xl shadow-indigo-500/10 backdrop-blur">
           <div className="p-8 md:p-12">
-            <div className="flex flex-col items-start gap-8 md:flex-row md:items-center">
+            <div className="flex flex-col items-start gap-8 md:flex-row md:items-start">
               {profile.avatarUrl ? (
                 <img
                   src={profile.avatarUrl}
@@ -104,7 +104,7 @@ export default function ShotaCvProfilePage() {
               )}
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">
+                  <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
                     {lang === "ja" ? profile.nameJa : profile.name}
                   </h1>
                   <p className="max-w-3xl text-base leading-7 text-neutral-200 md:text-lg">
