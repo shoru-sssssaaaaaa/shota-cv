@@ -4,7 +4,7 @@ export const translations = {
   en: {
     title: "Staff-Level Engineer / Function Lead",
     summary:
-      "I lead the design and transformation of large-scale platform systems across 10+ teams and 40+ engineers, driving architecture evolution from fragmented microservices into unified, data- and event-driven platforms.",
+      "I lead the design and transformation of large-scale platform systems across 10+ teams and 40+ engineers, driving architecture evolution from fragmented microservices into unified, data- and event-driven platforms. I also drive platform strategy and long-term roadmap planning, including privacy and consent architecture, data platform evolution (Data Mesh / Databricks), and experimentation systems that enable data-driven decision-making at scale.",
     tags: [
       "L6 Staff Engineer",
       "Architecture × Leadership × Platform",
@@ -19,6 +19,7 @@ export const translations = {
       "I am an engineer and technical leader who works best in environments where systems become difficult not only because of scale, but because many teams, products, and stakeholder groups need to move together. My strength is turning that complexity into a platform that is easier to scale, easier to govern, and easier for teams to build on.",
       "Across Toyota, Toyota North America, UPSIDER, and Woven by Toyota, I have worked on authentication platforms, cloud systems, real-time applications, QA automation, and privacy-first architecture. That mix gives me both enterprise-scale discipline and startup-style execution speed.",
       "In recent years, my focus has expanded beyond implementation into platform strategy: integrating fragmented systems, aligning architecture with organizational realities, and building foundations for experimentation, analytics, and responsible handling of personal data.",
+      "As a Function Head, I am also responsible for defining multi-year roadmap and technical strategy across multiple platform domains, aligning engineering execution with organizational and business goals."
     ],
     coreStrengths: "Core Strengths",
     strengths: [
@@ -162,7 +163,7 @@ export const translations = {
   ja: {
     title: "スタッフレベルエンジニア / ファンクションリード",
     summary:
-      "エンタープライズ、スタートアップ、組織横断的な環境で、複雑なプラットフォームの設計とスケーリングを行っています。分散システム、プライバシーファーストアーキテクチャ、実験基盤、QA自動化、大規模な技術リーダーシップが専門領域です。",
+      "10以上のチーム・40名以上のエンジニアにまたがる大規模プラットフォームシステムの設計と変革をリードし、断片化されたマイクロサービスから統一的なデータ駆動・イベント駆動プラットフォームへのアーキテクチャ進化を推進しています。プライバシー・同意アーキテクチャ、データプラットフォーム進化（Data Mesh / Databricks）、データ駆動型意思決定を可能にする実験システムなど、プラットフォーム戦略と長期ロードマップの策定も担っています。",
     tags: [
       "L6 スタッフエンジニア",
       "アーキテクチャ × リーダーシップ × プラットフォーム",
@@ -177,6 +178,7 @@ export const translations = {
       "スケールだけでなく、多くのチーム・プロダクト・ステークホルダーが連携して動く必要がある環境で力を発揮するエンジニア兼テクニカルリーダーです。その複雑さを、スケールしやすく、ガバナンスしやすく、チームが開発しやすいプラットフォームに変えることが強みです。",
       "トヨタ自動車、Toyota North America、UPSIDER、Woven by Toyotaで、認証基盤、クラウドシステム、リアルタイムアプリケーション、QA自動化、プライバシーファーストアーキテクチャに携わってきました。エンタープライズ規模の規律とスタートアップの実行速度の両方を持ち合わせています。",
       "近年は実装を超えてプラットフォーム戦略に注力しています。断片化されたシステムの統合、組織の実態に合わせたアーキテクチャの整合、実験・分析・個人データの責任ある取り扱いの基盤構築を推進しています。",
+      "ファンクションヘッドとして、複数のプラットフォーム領域にわたる中長期ロードマップと技術戦略の策定も担い、エンジニアリングの実行を組織・ビジネス目標と整合させる責任を負っています。",
     ],
     coreStrengths: "コアスキル",
     strengths: [
@@ -200,12 +202,12 @@ export const translations = {
     experience: "職務経歴",
     careerTimeline: "キャリアタイムライン",
     highlights: [
-      { label: "40+", value: "組織スコープのエンジニア数" },
-      { label: "10+", value: "横断チームのアラインメント" },
-      { label: "7+", value: "統合されたシステム数" },
-      { label: "60k+", value: "ビジネス顧客、高性能システム" },
-      { label: "440k", value: "認証基盤のユーザー数" },
-      { label: "80+", value: "REST API/GraphQL/gRPC の E2Eテスト + CI自動化" },
+      { label: "40+", value: "エンジニア（技術的意思決定の責任範囲）" },
+      { label: "10+", value: "チーム（組織横断アラインメント）" },
+      { label: "7+", value: "プロダクト（統合プラットフォームへ集約）" },
+      { label: "60k+", value: "ビジネス顧客（パフォーマンスクリティカルシステム）" },
+      { label: "440k", value: "ユーザー（グローバル認証基盤）" },
+      { label: "80+", value: "API（REST/GraphQL/gRPC + CI QA自動化）" },
     ],
     companies: [
       {
