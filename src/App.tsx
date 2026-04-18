@@ -72,12 +72,20 @@ export default function ShotaCvProfilePage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-neutral-100">
       <div className="mx-auto max-w-7xl px-6 py-10 md:px-10 lg:px-12">
         <div className="mb-4 flex justify-end">
-          <button
-            onClick={() => setLang(lang === "en" ? "ja" : "en")}
-            className="rounded-full border border-indigo-400/20 bg-white/5 px-4 py-2 text-sm text-neutral-200 transition hover:bg-indigo-400/10"
-          >
-            {lang === "en" ? "日本語" : "English"}
-          </button>
+          <div className="inline-flex rounded-full border border-indigo-400/20 bg-white/5 p-1 text-xs">
+            <button
+              onClick={() => setLang("en")}
+              className={`rounded-full px-3 py-1.5 transition ${lang === "en" ? "bg-indigo-500 text-white shadow" : "text-neutral-400 hover:text-neutral-200"}`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLang("ja")}
+              className={`rounded-full px-3 py-1.5 transition ${lang === "ja" ? "bg-indigo-500 text-white shadow" : "text-neutral-400 hover:text-neutral-200"}`}
+            >
+              JA
+            </button>
+          </div>
         </div>
 
         <section className="overflow-hidden rounded-[2rem] border border-indigo-400/20 bg-gradient-to-br from-slate-800/80 via-indigo-900/40 to-slate-800/80 shadow-2xl shadow-indigo-500/10 backdrop-blur">
