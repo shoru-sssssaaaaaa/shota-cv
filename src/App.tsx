@@ -36,7 +36,7 @@ export default function ShotaCvProfilePage() {
     github: "https://github.com/shoru-sssssaaaaaa",
     email: "mailto:shota.ss@gmail.com",
     resumePdf: "/Shota_Sakaguchi_CV.pdf",
-    avatarUrl: "/images/profile.JPG" 
+    avatarUrl: import.meta.env.BASE_URL + "images/profile.JPG"
   };
   const experience = [
     {
@@ -44,7 +44,7 @@ export default function ShotaCvProfilePage() {
       location: "Tokyo, Japan",
       roles: [
         {
-          title: "Lead / Staff Engineer (Function Lead)",
+          title: "Function Head / Staff Engineer (Function Lead)",
           period: "Sep 2024 – Present",
           bullets: [
             "Lead technical direction across 5 platform services: Inventor Portal, Fabrication Service, Feedback Analysis, Experimentation Platform, and Consent Architecture.",
@@ -163,113 +163,106 @@ export default function ShotaCvProfilePage() {
     { label: "40+", value: "Engineers in org scope" },
     { label: "10+", value: "Cross-functional teams aligned" },
     { label: "7+", value: "Systems unified into one platform" },
-    { label: "60k+", value: "Business customers supported" },
+    { label: "60k+", value: "Business customers, Performance-critical system" },
     { label: "440k", value: "Users on auth platform" },
-    { label: "80+", value: "REST APIs automated in CI" }
+    { label: "80+", value: "E2E Test in REST APIs/GraphQL/gRPC + automated in CI" }
   ];
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-neutral-100">
       <div className="mx-auto max-w-7xl px-6 py-10 md:px-10 lg:px-12">
-        <section className="overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 shadow-2xl">
-          <div className="grid gap-8 p-8 md:grid-cols-[1.25fr_0.95fr] md:p-12">
-            <div className="space-y-6">
-              <div className="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-sm text-cyan-200">
-                {profile.title}
-              </div>
-              <div className="space-y-4">
-                <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">
-                  {profile.name}
-                </h1>
-                <p className="max-w-3xl text-base leading-7 text-neutral-300 md:text-lg">
-                  I design and scale complex platforms across enterprise, startup, and cross-organizational environments. My work spans distributed systems, privacy-first architecture, experimentation platforms, QA automation, and large-scale technical leadership.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-3 text-sm text-neutral-300">
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">{profile.location}</span>
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">Google L5/L6-ready profile</span>
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-2">Architecture × Leadership × Platform</span>
-              </div>
-              <div className="flex flex-wrap gap-3 pt-2">
-                <a
-                  href={profile.linkedin}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-neutral-100 transition hover:bg-white/10"
-                >
-                  <LinkedInIcon />
-                  <span>LinkedIn</span>
-                </a>
-                <a
-                  href={profile.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-neutral-100 transition hover:bg-white/10"
-                >
-                  <GitHubIcon />
-                  <span>GitHub</span>
-                </a>
-                <a
-                  href={profile.email}
-                  className="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-neutral-100 transition hover:bg-white/10"
-                >
-                  <MailIcon />
-                  <span>Email</span>
-                </a>
-                <a
-                  href={profile.resumePdf}
-                  className="inline-flex items-center gap-2 rounded-2xl bg-cyan-400 px-4 py-3 text-sm font-medium text-neutral-950 transition hover:opacity-90"
-                >
-                  <DownloadIcon />
-                  <span>Download CV (PDF)</span>
-                </a>
+        <section className="overflow-hidden rounded-[2rem] border border-indigo-400/20 bg-gradient-to-br from-slate-800/80 via-indigo-900/40 to-slate-800/80 shadow-2xl shadow-indigo-500/10 backdrop-blur">
+          <div className="p-8 md:p-12">
+            <div className="flex flex-col items-start gap-8 md:flex-row md:items-center">
+              {profile.avatarUrl ? (
+                <img
+                  src={profile.avatarUrl}
+                  alt={profile.name}
+                  className="h-32 w-32 shrink-0 rounded-3xl object-cover ring-2 ring-indigo-400/30 md:h-40 md:w-40"
+                />
+              ) : (
+                <div className="flex h-32 w-32 shrink-0 items-center justify-center rounded-3xl bg-gradient-to-br from-cyan-300 to-blue-500 text-4xl font-semibold text-neutral-950 md:h-40 md:w-40">
+                  SS
+                </div>
+              )}
+              <div className="space-y-6">
+                
+                <div className="space-y-4">
+                  <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">
+                    {profile.name}
+                  </h1>
+                  <p className="max-w-3xl text-base leading-7 text-neutral-200 md:text-lg">
+                    I design and scale complex platforms across enterprise, startup, and cross-organizational environments. My work spans distributed systems, privacy-first architecture, experimentation platforms, QA automation, and large-scale technical leadership.
+                  </p>
+                </div>
+                <div className="inline-flex items-center rounded-full border border-violet-400/30 bg-violet-400/10 px-3 py-1 text-sm text-violet-200">
+                  {profile.title}
+                </div>
+                <div className="flex flex-wrap gap-3 text-sm text-neutral-200">
+                  <span className="rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-2">{profile.location}</span>
+                  <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-2">L6 Staff Engineer</span>
+                  <span className="rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-2">Architecture × Leadership × Platform</span>
+                  <span className="rounded-full border border-amber-400/20 bg-amber-400/10 px-3 py-2">Backend x Infrastructure x Data Engineering</span>
+                  <span className="rounded-full border border-rose-400/20 bg-rose-400/10 px-3 py-2">Distributed Systems</span>
+                  <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-2">Privacy-First Architecture</span>
+                  <span className="rounded-full border border-fuchsia-400/20 bg-fuchsia-400/10 px-3 py-2">Experimentation Platforms</span>
+                </div>
+                <div className="flex flex-wrap gap-3 pt-2">
+                  <a
+                    href={profile.linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-2xl border border-indigo-400/15 bg-white/5 px-4 py-3 text-sm text-neutral-100 transition hover:bg-indigo-400/10"
+                  >
+                    <LinkedInIcon />
+                    <span>LinkedIn</span>
+                  </a>
+                  <a
+                    href={profile.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-2xl border border-indigo-400/15 bg-white/5 px-4 py-3 text-sm text-neutral-100 transition hover:bg-indigo-400/10"
+                  >
+                    <GitHubIcon />
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    href={profile.email}
+                    className="inline-flex items-center gap-2 rounded-2xl border border-indigo-400/15 bg-white/5 px-4 py-3 text-sm text-neutral-100 transition hover:bg-indigo-400/10"
+                  >
+                    <MailIcon />
+                    <span>Email</span>
+                  </a>
+                  <a
+                    href={profile.resumePdf}
+                    className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-indigo-400 to-violet-400 px-4 py-3 text-sm font-medium text-white shadow-lg shadow-indigo-500/25 transition hover:opacity-90"
+                  >
+                    <DownloadIcon />
+                    <span>Download CV (PDF)</span>
+                  </a>
+                </div>
               </div>
             </div>
 
-            <div className="grid gap-5">
-              <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <div className="flex items-center gap-5">
-                  {profile.avatarUrl ? (
-                    <img
-                      src={profile.avatarUrl}
-                      alt={profile.name}
-                      className="h-24 w-24 rounded-3xl object-cover ring-1 ring-white/10"
-                    />
-                  ) : (
-                    <div className="flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-cyan-300 to-blue-500 text-3xl font-semibold text-neutral-950">
-                      SS
-                    </div>
-                  )}
-                  <div>
-                    <div className="text-xl font-semibold">{profile.name}</div>
-                    <div className="mt-1 text-sm text-neutral-400">{profile.title}</div>
-                    <div className="mt-3 text-sm leading-6 text-neutral-300">
-                      Building scalable platforms where architecture, product, privacy, and organizational alignment intersect.
-                    </div>
-                  </div>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+              {highlights.map((item) => (
+                <div
+                  key={item.value}
+                  className="rounded-3xl border border-indigo-400/15 bg-white/5 p-5 backdrop-blur"
+                >
+                  <div className="text-3xl font-semibold bg-gradient-to-r from-cyan-300 to-indigo-300 bg-clip-text text-transparent">{item.label}</div>
+                  <div className="mt-2 text-sm leading-6 text-neutral-200">{item.value}</div>
                 </div>
-              </div>
-
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {highlights.map((item) => (
-                  <div
-                    key={item.value}
-                    className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur"
-                  >
-                    <div className="text-3xl font-semibold text-cyan-300">{item.label}</div>
-                    <div className="mt-2 text-sm leading-6 text-neutral-300">{item.value}</div>
-                  </div>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
         <section className="mt-8 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
           <aside className="space-y-8">
-            <div className="rounded-[2rem] border border-white/10 bg-neutral-900 p-7 shadow-xl">
+            <div className="rounded-[2rem] border border-indigo-400/15 bg-slate-800/70 p-7 shadow-xl shadow-indigo-500/5 backdrop-blur">
               <h2 className="text-xl font-semibold">About</h2>
-              <div className="mt-4 space-y-4 text-sm leading-7 text-neutral-300">
+              <div className="mt-4 space-y-4 text-sm leading-7 text-neutral-200">
                 <p>
                   I am an engineer and technical leader who works best in environments where systems become difficult not only because of scale, but because many teams, products, and stakeholder groups need to move together. My strength is turning that complexity into a platform that is easier to scale, easier to govern, and easier for teams to build on.
                 </p>
@@ -282,13 +275,13 @@ export default function ShotaCvProfilePage() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-neutral-900 p-7 shadow-xl">
+            <div className="rounded-[2rem] border border-indigo-400/15 bg-slate-800/70 p-7 shadow-xl shadow-indigo-500/5 backdrop-blur">
               <h2 className="text-xl font-semibold">Core Strengths</h2>
               <div className="mt-4 flex flex-wrap gap-2">
                 {strengths.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm text-neutral-200"
+                    className="rounded-full border border-indigo-400/20 bg-indigo-400/10 px-3 py-2 text-sm text-neutral-200"
                   >
                     {item}
                   </span>
@@ -296,9 +289,9 @@ export default function ShotaCvProfilePage() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-neutral-900 p-7 shadow-xl">
+            <div className="rounded-[2rem] border border-indigo-400/15 bg-slate-800/70 p-7 shadow-xl shadow-indigo-500/5 backdrop-blur">
               <h2 className="text-xl font-semibold">Selected Focus Areas</h2>
-              <ul className="mt-4 space-y-3 text-sm leading-7 text-neutral-300">
+              <ul className="mt-4 space-y-3 text-sm leading-7 text-neutral-200">
                 <li>Experimentation platforms and data-driven systems</li>
                 <li>Identity, access control, and privacy-preserving architecture</li>
                 <li>Cloud-agnostic infrastructure and platform engineering</li>
@@ -307,34 +300,34 @@ export default function ShotaCvProfilePage() {
             </div>
           </aside>
 
-          <main className="rounded-[2rem] border border-white/10 bg-neutral-900 p-7 shadow-xl">
+          <main className="rounded-[2rem] border border-indigo-400/15 bg-slate-800/70 p-7 shadow-xl shadow-indigo-500/5 backdrop-blur">
             <div className="flex items-center justify-between gap-4">
               <h2 className="text-2xl font-semibold">Experience</h2>
-              <div className="text-sm text-neutral-400">Career timeline</div>
+              <div className="text-sm text-neutral-300">Career timeline</div>
             </div>
 
             <div className="mt-8 space-y-10">
               {experience.map((company) => (
                 <div key={company.company} className="relative pl-6">
-                  <div className="absolute left-0 top-1 h-full w-px bg-gradient-to-b from-cyan-400/70 via-white/10 to-transparent" />
-                  <div className="absolute left-[-5px] top-1 h-3 w-3 rounded-full bg-cyan-400 shadow-[0_0_24px_rgba(34,211,238,0.8)]" />
+                  <div className="absolute left-0 top-1 h-full w-px bg-gradient-to-b from-violet-400/70 via-indigo-400/20 to-transparent" />
+                  <div className="absolute left-[-5px] top-1 h-3 w-3 rounded-full bg-gradient-to-br from-violet-400 to-indigo-400 shadow-[0_0_24px_rgba(139,92,246,0.8)]" />
 
                   <div className="mb-4">
                     <h3 className="text-xl font-semibold">{company.company}</h3>
-                    <p className="text-sm text-neutral-400">{company.location}</p>
+                    <p className="text-sm text-neutral-300">{company.location}</p>
                   </div>
 
                   <div className="space-y-6">
                     {company.roles.map((role) => (
-                      <div key={`${company.company}-${role.title}`} className="rounded-3xl border border-white/10 bg-white/[0.03] p-5">
+                      <div key={`${company.company}-${role.title}`} className="rounded-3xl border border-indigo-400/10 bg-white/[0.05] p-5">
                         <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
                           <h4 className="text-base font-medium text-neutral-100">{role.title}</h4>
-                          <span className="text-sm text-cyan-300">{role.period}</span>
+                          <span className="text-sm text-violet-300">{role.period}</span>
                         </div>
-                        <ul className="mt-4 space-y-3 text-sm leading-7 text-neutral-300">
+                        <ul className="mt-4 space-y-3 text-sm leading-7 text-neutral-200">
                           {role.bullets.map((bullet) => (
                             <li key={bullet} className="flex gap-3">
-                              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400" />
                               <span>{bullet}</span>
                             </li>
                           ))}
