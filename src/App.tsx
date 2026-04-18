@@ -159,6 +159,17 @@ export default function ShotaCvProfilePage() {
     "QA automation and CI/CD"
   ];
 
+  const certifications = [
+    { name: "Databricks Certified Data Engineer Associate", issuer: "Databricks", date: "Feb 2025", expires: "Feb 2027" },
+    { name: "GitHub Actions", issuer: "GitHub", date: "Feb 2024", expires: "Feb 2027" },
+    { name: "CKA: Certified Kubernetes Administrator", issuer: "The Linux Foundation", date: "Jul 2022", expires: "Jul 2025" },
+    { name: "CKAD: Certified Kubernetes Application Developer", issuer: "The Linux Foundation", date: "Apr 2022", expires: "Apr 2025" },
+    { name: "Oracle Certified Java Programmer, Gold SE 11", issuer: "Oracle", date: "Nov 2021" },
+    { name: "Oracle Certified Java Programmer, Silver SE 11", issuer: "Oracle", date: "Aug 2021" },
+    { name: "AWS Solutions Architect Associate", issuer: "AWS", date: "Oct 2019", expires: "Oct 2022" },
+    { name: "Machine Learning", issuer: "Coursera", date: "Jun 2018" },
+  ];
+
   const highlights = [
     { label: "40+", value: "Engineers in org scope" },
     { label: "10+", value: "Cross-functional teams aligned" },
@@ -297,6 +308,26 @@ export default function ShotaCvProfilePage() {
                 <li>Cloud-agnostic infrastructure and platform engineering</li>
                 <li>QA automation from infrastructure to application layer</li>
               </ul>
+            </div>
+
+            <div className="rounded-[2rem] border border-indigo-400/15 bg-slate-800/70 p-7 shadow-xl shadow-indigo-500/5 backdrop-blur">
+              <h2 className="text-xl font-semibold">Certifications</h2>
+              <div className="mt-4 space-y-3">
+                {certifications.map((cert) => (
+                  <div key={cert.name} className="flex items-start justify-between gap-3 rounded-2xl border border-indigo-400/10 bg-white/[0.05] px-4 py-3">
+                    <div>
+                      <div className="text-sm font-medium text-neutral-100">{cert.name}</div>
+                      <div className="mt-1 text-xs text-neutral-300">{cert.issuer}</div>
+                    </div>
+                    <div className="shrink-0 text-right">
+                      <div className="text-xs text-violet-300">{cert.date}</div>
+                      {cert.expires && (
+                        <div className="mt-0.5 text-xs text-neutral-400">~ {cert.expires}</div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </aside>
 
