@@ -141,6 +141,21 @@ const s = StyleSheet.create({
     fontSize: 7.5,
     color: colors.tagText,
   },
+  certRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 1,
+  },
+  certName: {
+    fontSize: 7,
+    color: colors.text,
+    fontFamily: "Helvetica-Bold",
+  },
+  certMeta: {
+    fontSize: 6.5,
+    color: colors.light,
+  },
   twoCol: {
     flexDirection: "row",
     gap: 10,
@@ -295,6 +310,16 @@ const strengths = [
   "QA automation and CI/CD",
 ];
 
+const certifications = [
+  { name: "Databricks Certified Data Engineer Associate", issuer: "Databricks", date: "Feb 2025" },
+  { name: "GitHub Actions", issuer: "GitHub", date: "Feb 2024" },
+  { name: "CKA: Certified Kubernetes Administrator", issuer: "The Linux Foundation", date: "Jul 2022" },
+  { name: "CKAD: Certified Kubernetes Application Developer", issuer: "The Linux Foundation", date: "Apr 2022" },
+  { name: "Oracle Certified Java Programmer, Gold SE 11", issuer: "Oracle", date: "Nov 2021" },
+  { name: "AWS Solutions Architect Associate", issuer: "AWS", date: "Oct 2019" },
+  { name: "Machine Learning", issuer: "Coursera", date: "Jun 2018" },
+];
+
 const highlights = [
   { label: "40+", value: "Engineers in org scope" },
   { label: "10+", value: "Cross-functional teams aligned" },
@@ -365,8 +390,8 @@ const CvDocument = () => (
         </View>
       ))}
 
-      <View style={s.twoCol}>
-        <View style={s.col}>
+      <View style={{ flexDirection: "row", gap: 10, marginTop: 4 }}>
+        <View style={{ flex: 1 }}>
           <Text style={s.sectionTitle}>Core Strengths</Text>
           <View style={s.tagContainer}>
             {strengths.map((item) => (
@@ -374,17 +399,12 @@ const CvDocument = () => (
             ))}
           </View>
         </View>
-        <View style={s.col}>
-          <Text style={s.sectionTitle}>Focus Areas</Text>
-          {[
-            "Experimentation platforms and data-driven systems",
-            "Identity, access control, and privacy-preserving architecture",
-            "Cloud-agnostic infrastructure and platform engineering",
-            "QA automation from infrastructure to application layer",
-          ].map((item) => (
-            <View key={item} style={s.bullet}>
-              <Text style={s.bulletDot}>*</Text>
-              <Text style={s.bulletText}>{item}</Text>
+        <View style={{ flex: 1 }}>
+          <Text style={s.sectionTitle}>Certifications</Text>
+          {certifications.map((cert) => (
+            <View key={cert.name} style={s.certRow}>
+              <Text style={s.certName}>{cert.name}</Text>
+              <Text style={s.certMeta}>{cert.issuer} | {cert.date}</Text>
             </View>
           ))}
         </View>
