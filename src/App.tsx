@@ -35,7 +35,7 @@ export default function ShotaCvProfilePage() {
     linkedin: "https://www.linkedin.com/in/shota-sakaguchi-2a0990122/",
     github: "https://github.com/shoru-sssssaaaaaa",
     email: "mailto:shota.ss@gmail.com",
-    resumePdf: "/Shota_Sakaguchi_CV.pdf",
+    resumePdf: import.meta.env.BASE_URL + "Shota_Sakaguchi_CV.pdf",
     avatarUrl: import.meta.env.BASE_URL + "images/profile.JPG"
   };
   const experience = [
