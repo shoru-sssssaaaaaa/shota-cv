@@ -16,7 +16,7 @@ const colors = {
 
 const s = StyleSheet.create({
   page: {
-    padding: 24,
+    padding: 32,
     fontFamily: "Helvetica",
     fontSize: 8.5,
     color: colors.text,
@@ -26,13 +26,13 @@ const s = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    marginBottom: 6,
-    paddingBottom: 6,
+    marginBottom: 12,
+    paddingBottom: 10,
     borderBottomWidth: 2,
     borderBottomColor: colors.accent,
   },
   name: {
-    fontSize: 18,
+    fontSize: 22,
     fontFamily: "Helvetica-Bold",
     color: colors.primary,
   },
@@ -52,38 +52,38 @@ const s = StyleSheet.create({
   },
   summaryBox: {
     backgroundColor: colors.cardBg,
-    borderRadius: 4,
-    padding: 6,
-    marginBottom: 5,
+    borderRadius: 6,
+    padding: 10,
+    marginBottom: 10,
     borderLeftWidth: 3,
     borderLeftColor: colors.accent,
   },
   summaryText: {
-    fontSize: 7.5,
-    lineHeight: 1.35,
+    fontSize: 8,
+    lineHeight: 1.5,
     color: colors.muted,
   },
   sectionTitle: {
-    fontSize: 10,
+    fontSize: 11,
     fontFamily: "Helvetica-Bold",
     color: colors.primary,
-    marginBottom: 3,
-    marginTop: 5,
-    paddingBottom: 2,
+    marginBottom: 6,
+    marginTop: 10,
+    paddingBottom: 3,
     borderBottomWidth: 1,
     borderBottomColor: colors.border,
   },
   companyBlock: {
-    marginBottom: 3,
+    marginBottom: 8,
   },
   companyHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 1,
+    marginBottom: 3,
   },
   companyName: {
-    fontSize: 9.5,
+    fontSize: 10,
     fontFamily: "Helvetica-Bold",
   },
   companyLocation: {
@@ -91,8 +91,8 @@ const s = StyleSheet.create({
     color: colors.light,
   },
   roleBlock: {
-    marginBottom: 2,
-    paddingLeft: 6,
+    marginBottom: 6,
+    paddingLeft: 8,
     borderLeftWidth: 1,
     borderLeftColor: colors.border,
   },
@@ -100,38 +100,38 @@ const s = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 1,
+    marginBottom: 2,
   },
   roleTitle: {
-    fontSize: 8,
+    fontSize: 9,
     fontFamily: "Helvetica-Bold",
     color: colors.text,
   },
   rolePeriod: {
-    fontSize: 7,
+    fontSize: 7.5,
     color: colors.accent,
   },
   bullet: {
     flexDirection: "row",
-    marginBottom: 0,
-    paddingRight: 4,
+    marginBottom: 1,
+    paddingRight: 6,
   },
   bulletDot: {
-    width: 7,
+    width: 6,
     color: colors.accent,
-    fontSize: 7.5,
+    fontSize: 8,
   },
   bulletText: {
     flex: 1,
-    lineHeight: 1.25,
+    lineHeight: 1.4,
     color: colors.muted,
-    fontSize: 7.5,
+    fontSize: 8,
   },
   tagContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
     gap: 4,
-    marginTop: 3,
+    marginTop: 4,
   },
   tag: {
     backgroundColor: colors.tagBg,
@@ -145,41 +145,36 @@ const s = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 1,
+    marginBottom: 3,
+    paddingBottom: 3,
+    borderBottomWidth: 0.5,
+    borderBottomColor: colors.border,
   },
   certName: {
-    fontSize: 7,
+    fontSize: 8,
     color: colors.text,
     fontFamily: "Helvetica-Bold",
   },
   certMeta: {
-    fontSize: 6.5,
+    fontSize: 7,
     color: colors.light,
-  },
-  twoCol: {
-    flexDirection: "row",
-    gap: 10,
-    marginTop: 4,
-  },
-  col: {
-    flex: 1,
   },
   highlightGrid: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 4,
-    marginTop: 3,
+    gap: 6,
+    marginTop: 6,
   },
   highlightCard: {
     width: "31%",
     backgroundColor: colors.cardBg,
     borderRadius: 4,
-    padding: 4,
+    padding: 6,
     borderLeftWidth: 2,
     borderLeftColor: colors.accent,
   },
   highlightLabel: {
-    fontSize: 11,
+    fontSize: 12,
     fontFamily: "Helvetica-Bold",
     color: colors.primary,
   },
@@ -187,6 +182,30 @@ const s = StyleSheet.create({
     fontSize: 7,
     color: colors.muted,
     marginTop: 1,
+  },
+  aboutBox: {
+    marginTop: 6,
+  },
+  aboutText: {
+    fontSize: 8,
+    lineHeight: 1.4,
+    color: colors.muted,
+    marginBottom: 4,
+  },
+  focusBullet: {
+    flexDirection: "row",
+    marginBottom: 2,
+  },
+  focusDot: {
+    width: 6,
+    color: colors.accent,
+    fontSize: 8,
+  },
+  focusText: {
+    flex: 1,
+    fontSize: 8,
+    lineHeight: 1.4,
+    color: colors.muted,
   },
 });
 
@@ -202,9 +221,9 @@ const experience = [
           "Lead technical direction across 5 platform services: Inventor Portal, Fabrication Service, Feedback Analysis, Experimentation Platform, and Consent Architecture.",
           "Own architecture and technical decision-making for a 40+ engineer organization across 4 sub-functions.",
           "Drive alignment across 10+ cross-functional teams spanning product, data, legal, privacy, and engineering stakeholders.",
-          "Transform architecture from ~40 fragmented microservices into a cohesive data-oriented and event-driven platform.",
-          "Integrate 7+ independent systems into a unified platform with centralized UI and plugin-based extensibility.",
-          "Lead privacy-first consent architecture balancing legal, compliance, UX, and technical flexibility in a multi-tenant environment.",
+          "Transform architecture from roughly 40 fragmented microservices into a more cohesive data-oriented and event-driven platform.",
+          "Integrate 7+ independent systems into a unified platform with a centralized UI and plugin-based extensibility model.",
+          "Lead the design of a privacy-first consent architecture balancing legal, compliance, UX, and technical flexibility in a multi-tenant environment.",
         ],
       },
       {
@@ -212,19 +231,20 @@ const experience = [
         period: "Sep 2023 – Sep 2024",
         bullets: [
           "Built the QA organization from scratch and established end-to-end automated QA infrastructure.",
-          "Designed dynamic spin-up/spin-down of isolated QA environments per feature, including dependent services.",
+          "Designed dynamic spin-up and spin-down of isolated QA environments per feature, including dependent services.",
           "Enabled parallel testing across multiple environments while keeping the process cost-effective.",
-          "Consolidated user and access management across 10+ systems, improving security and operational efficiency.",
+          "Consolidated user and access management across 10+ systems, improving both security and operational efficiency.",
+          "Supported customer-facing engineering initiatives with scalable technical solutions.",
         ],
       },
       {
         title: "Technical Lead",
         period: "Nov 2022 – Sep 2024",
         bullets: [
-          "Built cloud-agnostic infrastructure using Terraform and IaC across multiple environments.",
+          "Built cloud-agnostic infrastructure using Terraform and Infrastructure as Code across multiple environments.",
           "Designed backend systems using Go and PostgreSQL for scalable services.",
           "Implemented secure authentication systems using Kubernetes and OpenID Connect.",
-          "Introduced DevOps practices and CI/CD automation to improve reliability and delivery workflows.",
+          "Introduced DevOps practices and CI/CD automation to improve system reliability and delivery workflows.",
         ],
       },
       {
@@ -246,7 +266,7 @@ const experience = [
         title: "Software Development Engineer in Test (SDET)",
         period: "Oct 2023 – Jul 2024",
         bullets: [
-          "Automated API testing for 80+ REST endpoints and integrated tests into CI for all branches.",
+          "Automated API testing for 80+ REST endpoints and integrated the tests into CI for all branches.",
           "Improved quality and reliability through repeatable automated validation in a high-growth fintech environment.",
         ],
       },
@@ -255,7 +275,7 @@ const experience = [
         period: "Aug 2022 – Oct 2023",
         bullets: [
           "Developed performance-critical APIs serving 60,000+ business customers.",
-          "Integrated external systems and improved backend performance and maintainability using Kotlin and Exposed.",
+          "Integrated external systems and improved backend performance, reliability, and maintainability using Kotlin and Exposed.",
         ],
       },
     ],
@@ -276,7 +296,7 @@ const experience = [
         title: "Project Development Manager",
         period: "Apr 2013 – Dec 2019",
         bullets: [
-          "Led development of a global authentication and authorization platform serving ~440,000 users.",
+          "Led development of a global authentication and authorization platform serving approximately 440,000 users.",
           "Established B2B web frameworks and technical standards using Java, Angular, and OpenAPI.",
           "Drove standardization across teams in large-scale enterprise environments.",
         ],
@@ -291,7 +311,7 @@ const experience = [
         title: "Software Engineer / Cloud Role",
         period: "Dec 2015 – Dec 2016",
         bullets: [
-          "Designed a microservice for a nationwide dealer system exposing real-time test-drive vehicle inventory across the U.S.",
+          "Designed a microservice for a nationwide dealer system that exposed real-time test-drive vehicle inventory across the U.S.",
           "Built cloud-based infrastructure supporting large-scale user access and dealership operations.",
         ],
       },
@@ -316,17 +336,32 @@ const certifications = [
   { name: "CKA: Certified Kubernetes Administrator", issuer: "The Linux Foundation", date: "Jul 2022" },
   { name: "CKAD: Certified Kubernetes Application Developer", issuer: "The Linux Foundation", date: "Apr 2022" },
   { name: "Oracle Certified Java Programmer, Gold SE 11", issuer: "Oracle", date: "Nov 2021" },
+  { name: "Oracle Certified Java Programmer, Silver SE 11", issuer: "Oracle", date: "Aug 2021" },
   { name: "AWS Solutions Architect Associate", issuer: "AWS", date: "Oct 2019" },
   { name: "Machine Learning", issuer: "Coursera", date: "Jun 2018" },
 ];
 
 const highlights = [
-  { label: "40+", value: "Engineers in org scope" },
-  { label: "10+", value: "Cross-functional teams aligned" },
-  { label: "7+", value: "Systems unified into one platform" },
-  { label: "60k+", value: "Business customers supported" },
-  { label: "440k", value: "Users on auth platform" },
-  { label: "80+", value: "E2E Tests automated in CI" },
+  { label: "40+", value: "Engineers (Technical decision ownership)" },
+  { label: "10+", value: "Teams (Cross-functional alignment)" },
+  { label: "7+", value: "Products (Integrated into unified platform)" },
+  { label: "60k+", value: "Business Customers (Performance-critical Systems)" },
+  { label: "440k", value: "Users (Global auth platform)" },
+  { label: "80+", value: "APIs (REST/GraphQL/gRPC + QA Automation in CI)" },
+];
+
+const focusAreas = [
+  "Experimentation platforms and data-driven systems",
+  "Identity, access control, and privacy-preserving architecture",
+  "Cloud-agnostic infrastructure and platform engineering",
+  "QA automation from infrastructure to application layer",
+];
+
+const aboutParagraphs = [
+  "I am an engineer and technical leader who works best in environments where systems become difficult not only because of scale, but because many teams, products, and stakeholder groups need to move together. My strength is turning that complexity into a platform that is easier to scale, easier to govern, and easier for teams to build on.",
+  "Across Toyota, Toyota North America, UPSIDER, and Woven by Toyota, I have worked on authentication platforms, cloud systems, real-time applications, QA automation, and privacy-first architecture. That mix gives me both enterprise-scale discipline and startup-style execution speed.",
+  "In recent years, my focus has expanded beyond implementation into platform strategy: integrating fragmented systems, aligning architecture with organizational realities, and building foundations for experimentation, analytics, and responsible handling of personal data.",
+  "As a Function Head, I am also responsible for defining multi-year roadmap and technical strategy across multiple platform domains, aligning engineering execution with organizational and business goals.",
 ];
 
 const CvDocument = () => (
@@ -353,7 +388,7 @@ const CvDocument = () => (
 
       <View style={s.summaryBox}>
         <Text style={s.summaryText}>
-          I design and scale complex platforms across enterprise, startup, and cross-organizational environments. My work spans distributed systems, privacy-first architecture, experimentation platforms, QA automation, and large-scale technical leadership.
+          I lead the design and transformation of large-scale platform systems across 10+ teams and 40+ engineers, driving architecture evolution from fragmented microservices into unified, data- and event-driven platforms. I also drive platform strategy and long-term roadmap planning, including privacy and consent architecture, data platform evolution (Data Mesh / Databricks), and experimentation systems that enable data-driven decision-making at scale.
         </Text>
       </View>
 
@@ -368,13 +403,13 @@ const CvDocument = () => (
 
       <Text style={s.sectionTitle}>Experience</Text>
       {experience.map((company) => (
-        <View key={company.company} style={s.companyBlock} wrap={false}>
+        <View key={company.company} style={s.companyBlock}>
           <View style={s.companyHeader}>
             <Text style={s.companyName}>{company.company}</Text>
             <Text style={s.companyLocation}>{company.location}</Text>
           </View>
           {company.roles.map((role) => (
-            <View key={`${company.company}-${role.title}`} style={s.roleBlock}>
+            <View key={`${company.company}-${role.title}`} style={s.roleBlock} wrap={false}>
               <View style={s.roleHeader}>
                 <Text style={s.roleTitle}>{role.title}</Text>
                 <Text style={s.rolePeriod}>{role.period}</Text>
@@ -390,7 +425,14 @@ const CvDocument = () => (
         </View>
       ))}
 
-      <View style={{ flexDirection: "row", gap: 10, marginTop: 4 }}>
+      <View style={s.aboutBox} wrap={false}>
+        <Text style={s.sectionTitle}>About</Text>
+        {aboutParagraphs.map((p) => (
+          <Text key={p.slice(0, 30)} style={s.aboutText}>{p}</Text>
+        ))}
+      </View>
+
+      <View style={{ flexDirection: "row", gap: 14, marginTop: 4 }}>
         <View style={{ flex: 1 }}>
           <Text style={s.sectionTitle}>Core Strengths</Text>
           <View style={s.tagContainer}>
@@ -398,7 +440,16 @@ const CvDocument = () => (
               <Text key={item} style={s.tag}>{item}</Text>
             ))}
           </View>
+
+          <Text style={{ ...s.sectionTitle, marginTop: 10 }}>Focus Areas</Text>
+          {focusAreas.map((item) => (
+            <View key={item} style={s.focusBullet}>
+              <Text style={s.focusDot}>*</Text>
+              <Text style={s.focusText}>{item}</Text>
+            </View>
+          ))}
         </View>
+
         <View style={{ flex: 1 }}>
           <Text style={s.sectionTitle}>Certifications</Text>
           {certifications.map((cert) => (
