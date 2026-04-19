@@ -95,7 +95,7 @@ export default function ShotaCvProfilePage() {
                 <img
                   src={profile.avatarUrl}
                   alt={profile.name}
-                  className="h-32 w-32 shrink-0 rounded-3xl object-cover ring-2 ring-indigo-400/30 md:h-40 md:w-40"
+                  className="h-48 w-24 shrink-0 rounded-3xl object-cover ring-2 ring-indigo-400/30 md:h-64 md:w-32"
                 />
               ) : (
                 <div className="flex h-32 w-32 shrink-0 items-center justify-center rounded-3xl bg-gradient-to-br from-cyan-300 to-blue-500 text-4xl font-semibold text-neutral-950 md:h-40 md:w-40">
