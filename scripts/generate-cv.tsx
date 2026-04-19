@@ -224,6 +224,7 @@ const experience = [
           "Transform architecture from roughly 40 fragmented microservices into a more cohesive data-oriented and event-driven platform.",
           "Integrate 7+ independent systems into a unified platform with a centralized UI and plugin-based extensibility model.",
           "Lead the design of a privacy-first consent architecture balancing legal, compliance, UX, and technical flexibility in a multi-tenant environment.",
+          "Defined multi-year platform roadmap across experimentation, data, and privacy domains, aligning engineering initiatives with long-term business strategy.",
         ],
       },
       {

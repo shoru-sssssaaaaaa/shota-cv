@@ -3,6 +3,8 @@ export type Lang = "en" | "ja";
 export const translations = {
   en: {
     title: "Staff-Level Engineer / Function Lead",
+    subtitle: "Platform Architect for Complex Organizations",
+    catchphrase: "Building platforms where architecture, organization, and data-driven decision-making converge.",
     summary:
       "I lead the design and transformation of large-scale platform systems across 10+ teams and 40+ engineers, driving architecture evolution from fragmented microservices into unified, data- and event-driven platforms. I also drive platform strategy and long-term roadmap planning, including privacy and consent architecture, data platform evolution (Data Mesh / Databricks), and experimentation systems that enable data-driven decision-making at scale.",
     tags: [
@@ -59,12 +61,13 @@ export const translations = {
             title: "Function Head / Staff Engineer (Function Lead)",
             period: "Sep 2024 – Present",
             bullets: [
-              "Lead technical direction across 5 platform services: Inventor Portal, Fabrication Service, Feedback Analysis, Experimentation Platform, and Consent Architecture.",
+              "Define multi-year platform roadmap across experimentation, data, and privacy domains, aligning engineering initiatives with long-term business strategy.",
               "Own architecture and technical decision-making for a 40+ engineer organization across 4 sub-functions.",
               "Drive alignment across 10+ cross-functional teams spanning product, data, legal, privacy, and engineering stakeholders.",
-              "Transform architecture from roughly 40 fragmented microservices into a more cohesive data-oriented and event-driven platform.",
+              "Transform architecture from ~40 fragmented microservices into a cohesive data-oriented platform, improving system maintainability and enabling faster cross-team development.",
               "Integrate 7+ independent systems into a unified platform with a centralized UI and plugin-based extensibility model.",
               "Lead the design of a privacy-first consent architecture balancing legal, compliance, UX, and technical flexibility in a multi-tenant environment.",
+              "Lead technical direction across 5 platform services.",
             ],
           },
           {
@@ -162,6 +165,8 @@ export const translations = {
   },
   ja: {
     title: "スタッフレベルエンジニア / ファンクションリード",
+    subtitle: "複雑な組織のためのプラットフォームアーキテクト",
+    catchphrase: "アーキテクチャ、組織、データ駆動型意思決定が交差するプラットフォームを構築する。",
     summary:
       "10以上のチーム・40名以上のエンジニアにまたがる大規模プラットフォームシステムの設計と変革をリードし、断片化されたマイクロサービスから統一的なデータ駆動・イベント駆動プラットフォームへのアーキテクチャ進化を推進しています。プライバシー・同意アーキテクチャ、データプラットフォーム進化（Data Mesh / Databricks）、データ駆動型意思決定を可能にする実験システムなど、プラットフォーム戦略と長期ロードマップの策定も担っています。",
     tags: [
@@ -218,12 +223,13 @@ export const translations = {
             title: "ファンクションヘッド / スタッフエンジニア（ファンクションリード）",
             period: "2024年9月 – 現在",
             bullets: [
-              "5つのプラットフォームサービス（Inventor Portal、Fabrication Service、Feedback Analysis、Experimentation Platform、Consent Architecture）の技術方針をリード。",
+              "実験・データ・プライバシー領域にわたる中長期プラットフォームロードマップを策定し、エンジニアリング施策を長期的なビジネス戦略と整合。",
               "4つのサブファンクション、40名以上のエンジニア組織のアーキテクチャと技術的意思決定を担当。",
               "プロダクト、データ、法務、プライバシー、エンジニアリングを含む10以上の横断チームのアラインメントを推進。",
-              "約40の断片化されたマイクロサービスを、より一貫性のあるデータ指向・イベント駆動プラットフォームへ変革。",
+              "約40の断片化されたマイクロサービスを一貫性のあるデータ指向プラットフォームへ変革し、システムの保守性向上とチーム横断開発の加速を実現。",
               "7以上の独立システムを統一UIとプラグインベースの拡張モデルを持つ統合プラットフォームに集約。",
               "マルチテナント環境で法務・コンプライアンス・UX・技術的柔軟性のバランスを取るプライバシーファースト同意アーキテクチャを設計。",
+              "5つのプラットフォームサービスの技術方針をリード。",
             ],
           },
           {
