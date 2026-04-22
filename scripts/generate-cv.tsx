@@ -1,5 +1,7 @@
 import React from "react";
 import { renderToFile, Document, Page, Text, View, StyleSheet, Link } from "@react-pdf/renderer";
+import { certifications } from "../src/data/certifications";
+import { profile } from "../src/data/profile";
 
 const colors = {
   primary: "#4338ca",
@@ -331,17 +333,6 @@ const strengths = [
   "QA automation and CI/CD",
 ];
 
-const certifications = [
-  { name: "Databricks Certified Data Engineer Associate", issuer: "Databricks", date: "Feb 2025" },
-  { name: "GitHub Actions", issuer: "GitHub", date: "Feb 2024" },
-  { name: "CKA: Certified Kubernetes Administrator", issuer: "The Linux Foundation", date: "Jul 2022" },
-  { name: "CKAD: Certified Kubernetes Application Developer", issuer: "The Linux Foundation", date: "Apr 2022" },
-  { name: "Oracle Certified Java Programmer, Gold SE 11", issuer: "Oracle", date: "Nov 2021" },
-  { name: "Oracle Certified Java Programmer, Silver SE 11", issuer: "Oracle", date: "Aug 2021" },
-  { name: "AWS Solutions Architect Associate", issuer: "AWS", date: "Oct 2019" },
-  { name: "Machine Learning", issuer: "Coursera", date: "Jun 2018" },
-];
-
 const highlights = [
   { label: "40+", value: "Engineers (Technical decision ownership)" },
   { label: "10+", value: "Teams (Cross-functional alignment)" },
@@ -370,17 +361,17 @@ const CvDocument = () => (
     <Page size="A4" style={s.page}>
       <View style={s.header}>
         <View>
-          <Text style={s.name}>Shota Sakaguchi</Text>
+          <Text style={s.name}>{profile.name}</Text>
           <Text style={s.title}>Staff-Level Engineer / Function Lead</Text>
           <View style={s.contactRow}>
-            <Text style={s.contactItem}>Tokyo, Japan</Text>
-            <Link style={s.contactItem} src="mailto:shota.ss@gmail.com">
-              shota.ss@gmail.com
+            <Text style={s.contactItem}>{profile.location}</Text>
+            <Link style={s.contactItem} src={profile.email}>
+              {profile.email.replace("mailto:", "")}
             </Link>
-            <Link style={s.contactItem} src="https://www.linkedin.com/in/shota-sakaguchi-2a0990122/">
+            <Link style={s.contactItem} src={profile.linkedin}>
               LinkedIn
             </Link>
-            <Link style={s.contactItem} src="https://github.com/shoru-sssssaaaaaa">
+            <Link style={s.contactItem} src={profile.github}>
               GitHub
             </Link>
           </View>

@@ -1,6 +1,47 @@
+import type { TagColor } from "./data/tagPalette";
+
 export type Lang = "en" | "ja";
 
-export const translations = {
+export type HighlightVisual = "bars" | "arc" | "pulse" | "grid" | "sparkline" | "dots";
+
+export type Tag = { label: string; color: TagColor };
+export type Strength = { label: string; color: TagColor };
+export type Highlight = { label: string; value: string; visual: HighlightVisual };
+
+type Role = {
+  title: string;
+  period: string;
+  current?: boolean;
+  bullets: string[];
+};
+
+type Company = {
+  company: string;
+  location: string;
+  roles: Role[];
+};
+
+type Translation = {
+  title: string;
+  subtitle: string;
+  catchphrase: string;
+  summary: string;
+  tags: Tag[];
+  downloadCv: string;
+  about: string;
+  aboutParagraphs: string[];
+  coreStrengths: string;
+  strengths: Strength[];
+  focusAreas: string;
+  focusItems: string[];
+  certifications: string;
+  experience: string;
+  careerTimeline: string;
+  highlights: Highlight[];
+  companies: Company[];
+};
+
+export const translations: Record<Lang, Translation> = {
   en: {
     title: "Staff-Level Engineer / Function Lead",
     subtitle: "Platform Architect for Complex Organizations",
@@ -8,12 +49,12 @@ export const translations = {
     summary:
       "I lead the design and transformation of large-scale platform systems across 10+ teams and 40+ engineers, driving architecture evolution from fragmented microservices into unified, data- and event-driven platforms. I also drive platform strategy and long-term roadmap planning, including privacy and consent architecture, data platform evolution (Data Mesh / Databricks), and experimentation systems that enable data-driven decision-making at scale.",
     tags: [
-      "L6 Staff Engineer",
-      "Architecture × Leadership × Platform",
-      "Backend x Infrastructure x Data Engineering",
-      "Distributed Systems",
-      "Privacy-First Architecture",
-      "Experimentation Platforms",
+      { label: "L6 Staff Engineer", color: "amber" },
+      { label: "Architecture × Leadership × Platform", color: "amber" },
+      { label: "Backend x Infrastructure x Data Engineering", color: "stone" },
+      { label: "Distributed Systems", color: "stone" },
+      { label: "Privacy-First Architecture", color: "orange" },
+      { label: "Experimentation Platforms", color: "orange" },
     ],
     downloadCv: "Download CV (PDF)",
     about: "About",
@@ -21,18 +62,18 @@ export const translations = {
       "I am an engineer and technical leader who works best in environments where systems become difficult not only because of scale, but because many teams, products, and stakeholder groups need to move together. My strength is turning that complexity into a platform that is easier to scale, easier to govern, and easier for teams to build on.",
       "Across Toyota, Toyota North America, UPSIDER, and Woven by Toyota, I have worked on authentication platforms, cloud systems, real-time applications, QA automation, and privacy-first architecture. That mix gives me both enterprise-scale discipline and startup-style execution speed.",
       "In recent years, my focus has expanded beyond implementation into platform strategy: integrating fragmented systems, aligning architecture with organizational realities, and building foundations for experimentation, analytics, and responsible handling of personal data.",
-      "As a Function Head, I am also responsible for defining multi-year roadmap and technical strategy across multiple platform domains, aligning engineering execution with organizational and business goals."
+      "As a Function Head, I am also responsible for defining multi-year roadmap and technical strategy across multiple platform domains, aligning engineering execution with organizational and business goals.",
     ],
     coreStrengths: "Core Strengths",
     strengths: [
-      "Distributed systems architecture",
-      "Cross-functional technical leadership",
-      "Platform design for complex organizations",
-      "Privacy-first and consent-aware systems",
-      "Kubernetes, Terraform, AWS",
-      "Kotlin, Java, Go, TypeScript",
-      "Event-driven and data-oriented architecture",
-      "QA automation and CI/CD",
+      { label: "Distributed systems architecture", color: "amber" },
+      { label: "Cross-functional technical leadership", color: "orange" },
+      { label: "Platform design for complex organizations", color: "amber" },
+      { label: "Privacy-first and consent-aware systems", color: "orange" },
+      { label: "Kubernetes, Terraform, AWS", color: "stone" },
+      { label: "Kotlin, Java, Go, TypeScript", color: "stone" },
+      { label: "Event-driven and data-oriented architecture", color: "amber" },
+      { label: "QA automation and CI/CD", color: "stone" },
     ],
     focusAreas: "Selected Focus Areas",
     focusItems: [
@@ -45,12 +86,12 @@ export const translations = {
     experience: "Experience",
     careerTimeline: "Career timeline",
     highlights: [
-      { label: "40+", value: "Engineers (Technical decision ownership)" },
-      { label: "10+", value: "Teams (Cross-functional alignment)" },
-      { label: "7+", value: "Products (Integrated into unified platform)" },
-      { label: "60k+", value: "Business Customers (Performance-critical Systems)" },
-      { label: "440k", value: "Users (Global auth platform)" },
-      { label: "80+", value: "APIs (APIs/GraphQL/gRPC + QA Automation in CI)" },
+      { label: "40+", value: "Engineers (Technical decision ownership)", visual: "bars" },
+      { label: "10+", value: "Teams (Cross-functional alignment)", visual: "grid" },
+      { label: "7+", value: "Products (Integrated into unified platform)", visual: "dots" },
+      { label: "60k+", value: "Business Customers (Performance-critical Systems)", visual: "sparkline" },
+      { label: "440k", value: "Users (Global auth platform)", visual: "arc" },
+      { label: "80+", value: "APIs (REST / GraphQL / gRPC + QA Automation)", visual: "pulse" },
     ],
     companies: [
       {
@@ -60,6 +101,7 @@ export const translations = {
           {
             title: "Function Head / Staff Engineer (Function Lead)",
             period: "Sep 2024 – Present",
+            current: true,
             bullets: [
               "Define multi-year platform roadmap across experimentation, data, and privacy domains, aligning engineering initiatives with long-term business strategy.",
               "Own architecture and technical decision-making for a 40+ engineer organization across 4 sub-functions.",
@@ -170,12 +212,12 @@ export const translations = {
     summary:
       "10以上のチーム・40名以上のエンジニアにまたがる大規模プラットフォームシステムの設計と変革をリードし、断片化されたマイクロサービスから統一的なデータ駆動・イベント駆動プラットフォームへのアーキテクチャ進化を推進しています。プライバシー・同意アーキテクチャ、データプラットフォーム進化（Data Mesh / Databricks）、データ駆動型意思決定を可能にする実験システムなど、プラットフォーム戦略と長期ロードマップの策定も担っています。",
     tags: [
-      "L6 スタッフエンジニア",
-      "アーキテクチャ × リーダーシップ × プラットフォーム",
-      "バックエンド x インフラ x データエンジニアリング",
-      "分散システム",
-      "プライバシーファーストアーキテクチャ",
-      "実験基盤",
+      { label: "L6 スタッフエンジニア", color: "amber" },
+      { label: "アーキテクチャ × リーダーシップ × プラットフォーム", color: "amber" },
+      { label: "バックエンド x インフラ x データエンジニアリング", color: "stone" },
+      { label: "分散システム", color: "stone" },
+      { label: "プライバシーファーストアーキテクチャ", color: "orange" },
+      { label: "実験基盤", color: "orange" },
     ],
     downloadCv: "CV ダウンロード (PDF)",
     about: "自己紹介",
@@ -187,14 +229,14 @@ export const translations = {
     ],
     coreStrengths: "コアスキル",
     strengths: [
-      "分散システムアーキテクチャ",
-      "組織横断テクニカルリーダーシップ",
-      "複雑な組織向けプラットフォーム設計",
-      "プライバシーファースト・同意管理システム",
-      "Kubernetes, Terraform, AWS",
-      "Kotlin, Java, Go, TypeScript",
-      "イベント駆動・データ指向アーキテクチャ",
-      "QA自動化・CI/CD",
+      { label: "分散システムアーキテクチャ", color: "amber" },
+      { label: "組織横断テクニカルリーダーシップ", color: "orange" },
+      { label: "複雑な組織向けプラットフォーム設計", color: "amber" },
+      { label: "プライバシーファースト・同意管理システム", color: "orange" },
+      { label: "Kubernetes, Terraform, AWS", color: "stone" },
+      { label: "Kotlin, Java, Go, TypeScript", color: "stone" },
+      { label: "イベント駆動・データ指向アーキテクチャ", color: "amber" },
+      { label: "QA自動化・CI/CD", color: "stone" },
     ],
     focusAreas: "注力領域",
     focusItems: [
@@ -207,12 +249,12 @@ export const translations = {
     experience: "職務経歴",
     careerTimeline: "キャリアタイムライン",
     highlights: [
-      { label: "40+", value: "エンジニア（技術的意思決定の責任範囲）" },
-      { label: "10+", value: "チーム（組織横断アラインメント）" },
-      { label: "7+", value: "プロダクト（統合プラットフォームへ集約）" },
-      { label: "60k+", value: "ビジネス顧客（パフォーマンスクリティカルシステム）" },
-      { label: "440k", value: "ユーザー（グローバル認証基盤）" },
-      { label: "80+", value: "API（REST/GraphQL/gRPC + CI QA自動化）" },
+      { label: "40+", value: "エンジニア（技術的意思決定の責任範囲）", visual: "bars" },
+      { label: "10+", value: "チーム（組織横断アラインメント）", visual: "grid" },
+      { label: "7+", value: "プロダクト（統合プラットフォームへ集約）", visual: "dots" },
+      { label: "60k+", value: "ビジネス顧客（パフォーマンスクリティカルシステム）", visual: "sparkline" },
+      { label: "440k", value: "ユーザー（グローバル認証基盤）", visual: "arc" },
+      { label: "80+", value: "API（REST/GraphQL/gRPC + CI QA自動化）", visual: "pulse" },
     ],
     companies: [
       {
@@ -222,6 +264,7 @@ export const translations = {
           {
             title: "ファンクションヘッド / スタッフエンジニア（ファンクションリード）",
             period: "2024年9月 – 現在",
+            current: true,
             bullets: [
               "実験・データ・プライバシー領域にわたる中長期プラットフォームロードマップを策定し、エンジニアリング施策を長期的なビジネス戦略と整合。",
               "4つのサブファンクション、40名以上のエンジニア組織のアーキテクチャと技術的意思決定を担当。",
@@ -325,4 +368,4 @@ export const translations = {
       },
     ],
   },
-} as const;
+};
